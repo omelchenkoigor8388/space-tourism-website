@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap');
+
+
+:root{
+    /*typography*/
+    --font-family: 'Cormorant Garamond', sans-serif;
+    --font-family-text: 'Tajawal', sans-serif;
+
+    --weight-400: 300;
+    --weight-300: 400;
+}
 
 
 *{
@@ -42,6 +54,9 @@ header{
 
     background-color:rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(15px);
+
+    font-family: var(--font-family-text);
+    font-weight: var(--weight-300);
 }
 .menu ul{
     
@@ -63,7 +78,7 @@ header{
 .menu ul li a:before{
     content: '';
     position: absolute;
-    bottom: -35px;
+    bottom: -40px;
     width: 100%;
     height: 4px;
     background-color: rgb(255, 255, 255);
@@ -98,15 +113,20 @@ section{
 }
 .text h3{
     font-size: 30px;
-    font-weight: 300;
+
+    font-family: var(--font-family);
+    font-weight: var(--weight-400);
 }
 .text h1{
     font-size: 150px;
-    font-weight: 300;
+    font-family: var(--font-family);
+    font-weight: var(--weight-400);
 }
 .text p{
     font-size: 20px;
-    font-weight: 300;
+
+    font-family: var(--font-family-text);
+    font-weight: var(--weight-300);
 }
 .box__logo{
     height: 100%;
@@ -153,7 +173,7 @@ section{
     }
     .menu{
         width: 100%;
-        height: max-content;
+        height: 90%;
         position: absolute;
         top:80px;
         left: 0;
