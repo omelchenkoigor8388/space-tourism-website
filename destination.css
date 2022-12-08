@@ -104,6 +104,9 @@ section{
     padding: 10px;
     height: 100%;
     width: 50%;
+
+    animation-name: animation__block;
+    animation-duration: 4s;
 }
 .title{
     padding-bottom: 50px;
@@ -124,6 +127,9 @@ section{
     height: 100%;
     width: 50%;
     padding-top: 120px;
+
+    animation-name: animation__block;
+    animation-duration: 4s;
 }
 
 .button__planet{
@@ -188,7 +194,17 @@ section{
 }
 .time__planet{
     width: 50%;
+}
 
+@keyframes animation__block{
+    0%{
+        top: 50px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 0px;
+        opacity: 1;
+    }
 }
 
 @media(max-width: 1100px){

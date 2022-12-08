@@ -45,6 +45,9 @@ header{
 .logo img{
     width: 100%;
     height: 100%;
+
+    animation-name: right-stor;
+    animation-duration: 4s;
 }
 .menu{
     padding-top: 35px;
@@ -103,6 +106,9 @@ section{
     padding: 10px;
     height: 100%;
     width: 50%;
+
+    animation-name: animation__block;
+    animation-duration: 4s;
 }
 .text{
     max-width: 470px;
@@ -142,6 +148,9 @@ section{
     border-radius: 50%;
 
     background-color: white;
+
+    animation-name: animation__block;
+    animation-duration: 4s;
 }
 .round p{
     position: relative;
@@ -150,6 +159,18 @@ section{
     color: black;
     font-size: 25px;
 }
+
+@keyframes animation__block{
+    0%{
+        top: 50px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
 
 @media(max-width: 1100px){
     .dispay{
