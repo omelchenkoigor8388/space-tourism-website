@@ -272,10 +272,6 @@ section{
         height: 50%;
         width: 100%;
         padding-top: 0;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        grid-column-start: 1;
-        grid-column-end: 2;
     }
     .button__people{
         text-align: center;
