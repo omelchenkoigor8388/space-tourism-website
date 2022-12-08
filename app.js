@@ -1,13 +1,13 @@
+//---------------menu-------------------//
 let menuToggle =document.querySelector('.menuToggle');
 let header = document.querySelector('header');
 let body = document.querySelector('body');
 
 menuToggle.onclick = function(){
     header.classList.toggle('open');
-    body.classList.toggle('start')
+    body.classList.toggle('start');
 }
-
-
+//-----------planet-info-----------------//
 let moon = {
   "name": "MOON",
   "images": {
@@ -74,6 +74,9 @@ function changeText_2(elementClicked) {
   }
 }
 
+
+
+
 function changeText_3(elementClicked) {
   var button3 = document.getElementById('b3');
   if (elementClicked == button3) {
@@ -95,3 +98,7 @@ function changeText_4(elementClicked) {
     document.getElementById("plenat_d").innerHTML = titan.travel;
   }
 }
+
+//--------------planet-info-animation-----------------//
+
+

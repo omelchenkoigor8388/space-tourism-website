@@ -24,7 +24,7 @@
     min-height: 100vh;
     height:max-content;
 
-    background: url(images/destination/background-destination-desktop.jpg) no-repeat;
+    background: url(images/crew/background-crew-desktop.jpg) no-repeat;
     background-size: cover;
 }
 .conteuner{
@@ -100,7 +100,7 @@ section{
     justify-content: space-between;
     height: 80%;
 }
-.box__planet{
+.box__people{
     padding: 10px;
     height: 100%;
     width: 50%;
@@ -109,7 +109,7 @@ section{
     animation-duration: 4s;
 }
 .title{
-    padding-bottom: 50px;
+    padding-bottom: 250px;
 }
 .title h1{
     font-family: var(--family-header);
@@ -118,48 +118,54 @@ section{
 
     color: white;
 }
-.box__planet__images img{
+.role h1{
+    font-family: var(--font-family);
+    font-weight: var(--weight-100);
+    opacity: 0.8;
+
+    color: white;
+}
+.box__people__images img{
     width: 80%;
 }
 
-.box__info__planet{
+.box__info__people{
     height: 100%;
     width: 50%;
-    padding-top: 120px;
+    padding-top: 200px;
 
     animation-name: animation__block;
     animation-duration: 4s;
 }
 
-.button__planet{
+.button__people{
     padding: 50px 20px;
     z-index: 999;
 }
-.button__planet input{
-    padding-right: 2rem;
+.button__people input{
+    width: 15px;
+    margin-right: 1rem;
 
     border: none;
-    color: rgba(255, 255, 255, 0.363);
-    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.423);
 }
-.button__planet input:hover{
+.button__people input:hover{
     cursor: pointer;
 
-    color: white;
+    background-color: rgb(255, 255, 255);
 }
-.name__planet h1{
-    font-size: 100px;
+.name__people h1{
+    font-size: 60px;
     font-family: var(--font-family);
     font-weight: var(--weight-300);
 
     color: white;
 }
-.info__planet {
+.info__people {
     padding-bottom: 50px;
-
-    box-shadow: 0px 0.5px 0px rgb(255, 255, 255);
 }
-.info__planet p{
+.info__people p{
     font-size: 18px;
     line-height: 30px;
     font-family: var(--font-family-text);
@@ -169,40 +175,6 @@ section{
     color: white;
 }
 
-.info__planet__time_or_km{
-    display: flex;
-    text-align: center;
-    padding-top: 20px;
-}
-.info__planet__time_or_km p{
-    font-family: var(--font-family-text);
-    font-weight: 100;
-    opacity: 0.6;
-
-    color: white;
-}
-.info__planet__time_or_km h1{
-    font-family: var(--font-family-text);
-    font-weight: 100;
-
-    color: white;
-}
-.km__planet{
-    width: 50%;
-
-}
-.time__planet{
-    width: 50%;
-}
-
-.open_moon{
-    animation-name: animation__block;
-    animation-duration: 4s;
-}
-.open_mars{
-    animation-name: animation__block;
-    animation-duration: 4s;
-}
 
 @keyframes animation__block{
     0%{
@@ -217,7 +189,7 @@ section{
 
 @media(max-width: 1100px){
     .dispay{
-        background: url(images/home/background-home-tablet.jpg) no-repeat;
+        background: url(images/crew/background-crew-tablet.jpg) no-repeat;
         background-size: cover;
     }
 }
@@ -227,7 +199,7 @@ section{
         margin: 0px 10px;
     }
     .dispay{
-        background: url(images/destination/background-destination-mobile.jpg) no-repeat;
+        background: url(images/crew/background-crew-mobile.jpg) no-repeat;
         background-size: cover;
     }
     .logo{
@@ -276,33 +248,43 @@ section{
     }
 
     section{
-        display: block;
-        padding-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
-    .box__planet{
+    .box__people{
         height: 50%;
         width: 100%;
+    }
+    .name__people{
+        text-align: center;
+    }
+    .role{
+        text-align: center;
+    }
+    .title{
+        padding-bottom: 100px;
     }
     .title h1{
         text-align: center;
     }
-    .name__planet{
-        text-align: center;
-    }
     
-    .box__info__planet{
+    .box__info__people{
         height: 50%;
         width: 100%;
         padding-top: 0;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
     }
-    .button__planet{
+    .button__people{
         text-align: center;
         padding-right: 0;
     }
-    .box__planet__images{
+    .box__people__images{
         text-align: center;
     }
-    .info__planet{
+    .info__people{
         text-align: center;
     }
 }
