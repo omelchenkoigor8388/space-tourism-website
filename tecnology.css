@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=M+PLUS+Rounded+1c&family=PT+Sans+Narrow&family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap');
+
+
+:root{
+    /*typography*/
+    --family-header: 'ABeeZee', sans-serif;
+    --font-family: 'Cormorant Garamond', sans-serif;
+    --font-family-text: 'Tajawal', sans-serif;
+
+    --weight-400: 400;
+}
+
+*{
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dispay{
+    width: 100%;
+    min-height: 100vh;
+    height:max-content;
+
+    background: url(images/technology/background-technology-desktop.jpg) no-repeat;
+    background-size: cover;
+}
+.conteuner{
+    height: 100%;
+    margin:0px 50px;
+}
+header{
+    display: flex;
+    height: max-content;
+    padding: 10px;
+    
+    justify-content: space-between;
+}
+.logo{
+    margin-top: 10px;
+    width: 80px;
+    height: 80px;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+.menu{
+    padding-top: 35px;
+    padding-right: 100px;
+    padding-left: 50px;
+    height: 100px;
+
+    background-color:rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(15px);
+
+    font-family: var(--font-family-text);
+    font-weight: var(--weight-300);
+}
+.menu ul{
+    
+    display: flex;
+    gap: 15px;
+}
+.menu ul li{
+
+    list-style: none;
+}
+.menu ul li a{
+    position: relative;
+    text-decoration: none;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+
+    color: rgb(255, 255, 255);
+}
+.menu ul li a:before{
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+}
+.menu ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.menuToggle{
+    display: none;
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+    height: 80%;
+}
+.box__people{
+    display: flex;
+    margin-top: 100px;
+    padding: 10px;
+    height: 100%;
+    width: 50%;
+
+    animation-name: animation__block;
+    animation-duration: 4s;
+}
+.title{
+    padding-bottom: 250px;
+}
+.title h1{
+    font-family: var(--family-header);
+    font-weight: var(--weight-100);
+    opacity: 0.8;
+
+    color: white;
+}
+.role h1{
+    font-family: var(--font-family);
+    font-weight: var(--weight-100);
+    opacity: 0.8;
+
+    color: white;
+}
+.box__people__images{
+    text-align: end;
+}
+.box__people__images img{
+    width: 80%;
+}
+
+.box__info__people{
+    height: 100%;
+    width: 50%;
+    padding-top: 70px;
+
+    animation-name: animation__block;
+    animation-duration: 4s;
+}
+
+.button__people{
+    width: 300px;
+    height: auto;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+}
+.button__people input{
+    width: 50px;
+    height: 50px;
+
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px white solid;
+    border-radius: 50%;
+}
+.button__people input:hover{
+    cursor: pointer;
+
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: none;
+
+}
+.name__people h1{
+    font-size: 60px;
+    font-family: var(--font-family);
+    font-weight: var(--weight-300);
+
+    color: white;
+}
+.info__people {
+    padding-bottom: 50px;
+}
+.info__people p{
+    font-size: 18px;
+    line-height: 30px;
+    font-family: var(--font-family-text);
+    font-weight: 100;
+    opacity: 0.6;
+
+    color: white;
+}
+
+
+@keyframes animation__block{
+    0%{
+        top: 50px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+@media(max-width: 1100px){
+    .dispay{
+        background: url(images/technology/background-technology-tablet.jpg) no-repeat;
+        background-size: cover;
+    }
+}
+
+@media(max-width: 845px){
+    .conteuner{
+        margin: 0px 10px;
+    }
+    .dispay{
+        background: url(images/technology/background-technology-mobile.jpg) no-repeat;
+        background-size: cover;
+    }
+    .logo{
+        margin-top: 0px;
+        width: 50px;
+        height: 50px;
+    }
+    .menu{
+        display: none;
+        width: 100%;
+        height: 90%;
+        position: absolute;
+        top:80px;
+        left: 0;
+        padding: 20px;
+
+        opacity: 0;
+        overflow: hidden;
+    }
+    .menu ul{
+        display: block;
+    }
+    .menu ul li{
+        padding: 20px 0px;
+    }
+    .menu ul li a:before{
+        bottom: -10px;
+        height: 2px;
+
+    }
+    .menuToggle{
+        display: block;
+        width: 50px;
+        height: 50px;
+
+        color: white;
+    }
+    header.open .menu{
+        position: fixed;
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.132);
+        z-index: 999;
+    }
+
+    section{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .box__people{
+        height: 50%;
+        width: 100%;
+        margin-top: 0px;
+        display: grid;
+        justify-items: center;
+    }
+    .name__people{
+        text-align: center;
+    }
+    .role{
+        text-align: center;
+    }
+    .title{
+        padding-bottom: 100px;
+    }
+    .title h1{
+        text-align: center;
+    }
+    
+    .box__info__people{
+        height: 50%;
+        width: 100%;
+        padding-top: 0;
+    }
+    .button__people{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        text-align: center;
+        padding-right: 0;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .box__people__images{
+        text-align: center;
+    }
+    .info__people{
+        text-align: center;
+    }
+}
