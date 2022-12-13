@@ -52,50 +52,77 @@ let titan ={
   "travel": "7 years"
 }
 
+
+
 function changeText(elementClicked) {
   var button1 = document.getElementById('b1');
+  var name = document.querySelector('section');
+
   if (elementClicked == button1) {
     document.getElementById("name_plenat").innerHTML = moon.name;
     document.querySelector("#image_plenet").src = "images/destination/planet/image-moon.png"
     document.getElementById("plenat_info").innerHTML = moon.description;
     document.getElementById("plenat_km").innerHTML = moon.distance;
     document.getElementById("plenat_d").innerHTML = moon.travel;
+
+    name.classList.add('animation')
+    setTimeout(function() {
+      name.classList.remove('animation');
+    }, 1500);
   }
 }
 
 function changeText_2(elementClicked) {
   var button2 = document.getElementById('b2');
+  var name = document.querySelector('section');
+
   if (elementClicked == button2) {
     document.getElementById("name_plenat").innerHTML = mars.name;
     document.querySelector("#image_plenet").src = "images/destination/planet/image-mars.png"
     document.getElementById("plenat_info").innerHTML = mars.description;
     document.getElementById("plenat_km").innerHTML = mars.distance;
     document.getElementById("plenat_d").innerHTML = mars.travel;
+
+    name.classList.add('animation')
+    setTimeout(function() {
+      name.classList.remove('animation');
+    }, 1500);
   }
 }
 
-
-
-
 function changeText_3(elementClicked) {
   var button3 = document.getElementById('b3');
+  var name = document.querySelector('section');
+
   if (elementClicked == button3) {
     document.getElementById("name_plenat").innerHTML = europa.name;
     document.querySelector("#image_plenet").src = "images/destination/planet/image-europa.png"
     document.getElementById("plenat_info").innerHTML = europa.description;
     document.getElementById("plenat_km").innerHTML = europa.distance;
     document.getElementById("plenat_d").innerHTML = europa.travel;
+
+    name.classList.add('animation')
+    setTimeout(function() {
+      name.classList.remove('animation');
+    }, 1500);
   }
 }
 
 function changeText_4(elementClicked) {
   var button4 = document.getElementById('b4');
+  var name = document.querySelector('section');
+
   if (elementClicked == button4) {
     document.getElementById("name_plenat").innerHTML = titan.name;
     document.querySelector("#image_plenet").src = "images/destination/planet/image-titan.png"
     document.getElementById("plenat_info").innerHTML = titan.description;
     document.getElementById("plenat_km").innerHTML = titan.distance;
     document.getElementById("plenat_d").innerHTML = titan.travel;
+
+    name.classList.add('animation')
+    setTimeout(function() {
+      name.classList.remove('animation');
+    }, 1500);
   }
 }
 

@@ -187,6 +187,11 @@ section{
     color: white;
 }
 
+.animation{
+    animation-name: animation__block;
+    animation-duration: 3s;
+}
+
 
 @keyframes animation__block{
     0%{

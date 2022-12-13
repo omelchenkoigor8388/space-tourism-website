@@ -195,14 +195,11 @@ section{
     width: 50%;
 }
 
-.open_moon{
+.animation{
     animation-name: animation__block;
-    animation-duration: 4s;
+    animation-duration: 3s;
 }
-.open_mars{
-    animation-name: animation__block;
-    animation-duration: 4s;
-}
+
 
 @keyframes animation__block{
     0%{
